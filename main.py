@@ -1,19 +1,16 @@
-from vendingMachine import VendingMachine, Coin
+from vendingMachine import VendingMachine, Coin, Product
 
-items = {"Coffee": "0A", "Soda": "0B"}
-prices = {"Coffee": "$0.75", "Soda": "$0.50"}
 vending_machine = VendingMachine()
 
 
 def buy(user_input):
-    if user_input == "0A":
-        can_buy = vending_machine.purchase(0.75)
-    elif user_input == "0B":
-        can_buy = vending_machine.purchase(0.50)
-    else:
+    product_option = Product.OPTIONS[user_input]
+
+    if product_option is None:
         print("Invalid Input")
         return
 
+    can_buy = vending_machine.purchase(float(Product.PRICE[product_option]))
     if can_buy:
         print("Item Vended.")
         print("You currently have $" + str(vending_machine.get_credit()) + " left.")
@@ -26,7 +23,7 @@ def add_coin(user_input):
     if user_input == "1":
         vending_machine.insert_coin(Coin(1))
     elif user_input == "0.5":
-        vending_machine.insert_coin((0.50))
+        vending_machine.insert_coin(Coin(0.50))
     elif user_input == "0.25":
         vending_machine.insert_coin(Coin(0.25))
     elif user_input == "0.1":
@@ -70,14 +67,13 @@ def main():
                     choice = 1
 
         print("Here are your selections!")
-        for item, selection in items.items():
-            item_list.append((item, selection))
-
-        print(item_list[::-1])
+        for item, selection in Product.OPTIONS.items():
+            print(item, selection)
 
         print()
+
         print("Here are the prices")
-        for item, price in prices.items():
+        for item, price in Product.PRICE.items():
             print(item, price)
 
         print()

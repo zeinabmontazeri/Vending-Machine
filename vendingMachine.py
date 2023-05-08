@@ -28,4 +28,17 @@ class Coin(object):
     def __eq__(self, other):
         return self.value == other.value
 
+
+class Product(object):
+    VALUES = ("Coffee", "Soda")
+    OPTIONS = {"0A": "Coffee", "0B": "Soda"}
+    PRICE = {"Coffee": "0.75", "Soda": "0.50"}
+
+    def __init__(self, value):
+        self.value = value
+
+    def __eq__(self, other):
+        return self.value == other.value
+
+
 # my idea: first choose product then add coin
