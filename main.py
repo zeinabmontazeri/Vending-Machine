@@ -98,6 +98,7 @@ def main():
                     print("Invalid command")
                     choice = 1
 
+        print("Get your remaining money $" + str(vending_machine.get_credit()))
         print("Thank you for using this vending machine")
 
 
