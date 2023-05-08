@@ -26,7 +26,7 @@ def add_coin(user_input):
     if user_input == "1":
         vending_machine.insert_coin(Coin(1))
     elif user_input == "0.5":
-        vending_machine.insert_coin(l(0.50))
+        vending_machine.insert_coin((0.50))
     elif user_input == "0.25":
         vending_machine.insert_coin(Coin(0.25))
     elif user_input == "0.1":
