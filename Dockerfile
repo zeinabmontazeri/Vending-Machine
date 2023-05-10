@@ -4,4 +4,6 @@ WORKDIR /app
 
 COPY . .
 
+RUN python -m unittest test.py
+
 CMD ["python", "main.py"]
