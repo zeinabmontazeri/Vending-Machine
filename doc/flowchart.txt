@@ -1,0 +1,24 @@
+START
+
+DISPLAY available items and their prices
+
+WHILE customer wants to add coin:
+
+    PROMPT customer to enter coin
+
+END
+
+WHILE customer wants to purchase item:
+
+    PROMPT customer to select item
+
+    IF customer has enough credit:
+        DISPENSE item
+        CALCULATE and DISPLAY change
+    ELSE:
+        DISPLAY error message
+
+END
+
+STOP
+
