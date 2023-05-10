@@ -22,19 +22,13 @@ docker run -ti vendingmachine_app
 ```
 
 # Usage
-To use the vending machine, run main.py file using following command:
-```console
-python main.py
-```
 You will see a list of available items and their prices. To purchase an item, select it and enter the required coins. The vending machine will dispense the item if the correct amount of coins has been entered.
 
 # Data Storage
 This vending machine implementation uses in-memory data storage, which means that all data is stored in the memory of the running Python process. This approach was chosen for simplicity and ease of use.
 
 # Unit Testing
-This vending machine implementation includes unit tests to ensure that the code is working correctly. To run the tests, use the following command:
+This vending machine implementation includes unit tests to ensure that the code is working correctly. Tests run inside a docker container, but you can also run them use the following command:
 ```console
 python -m unittest test.py
 ```
-
-This will run all of the unit tests in the tests directory.
