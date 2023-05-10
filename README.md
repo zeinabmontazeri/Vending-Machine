@@ -1,19 +1,25 @@
 # Vending Machine
 
 This is a simple vending machine implemented in Python that simulates the operation of a real vending machine. The vending machine allows users to select items and pay for them using coins.
-Installation
+
+# Installation
 
 To run the vending machine, you will need Docker installed on your system. Once you have Docker installed, follow these steps:
 
-# Clone this repository to your local machine:
+1. Clone this repository to your local machine:
 ```console
  git clone https://github.com/zeinabmontazeri/Vending-Machine.git
  ```
 
-# Build the Docker image:
+2. Build the Docker image:
 ```console
- docker build -t vendingmachine_web .
+ docker build -t vendingmachine_app .
  ```
+ 
+3. Run the Docker container:
+```console
+docker run -ti vendingmachine_app
+```
 
 # Usage
 To use the vending machine, run main.py file using following command:
