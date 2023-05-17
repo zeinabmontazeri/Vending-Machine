@@ -2,8 +2,6 @@ class VendingMachine(object):
 
     def __init__(self):
         self.credit = 0
-        self.price = None
-        self.change = []
 
     def insert_coin(self, coin):
         self.credit += coin.value
@@ -25,9 +23,6 @@ class Coin(object):
     def __init__(self, value):
         self.value = value
 
-    def __eq__(self, other):
-        return self.value == other.value
-
 
 class Product(object):
     VALUES = ("Coffee", "Soda")
@@ -36,9 +31,5 @@ class Product(object):
 
     def __init__(self, value):
         self.value = value
-
-    def __eq__(self, other):
-        return self.value == other.value
-
 
 # my idea: first choose product then add coin

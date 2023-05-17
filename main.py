@@ -4,9 +4,10 @@ vending_machine = VendingMachine()
 
 
 def buy(user_input):
-    product_option = Product.OPTIONS[user_input]
 
-    if product_option is None:
+    if user_input in Product.OPTIONS:
+        product_option = Product.OPTIONS[user_input]
+    else:
         print("Invalid Input")
         return
 
@@ -35,7 +36,6 @@ def add_coin(user_input):
 
 
 def main():
-    item_list = []
     switch = 1
     while switch == 1:
         print("Welcome to my Vending Machine")
